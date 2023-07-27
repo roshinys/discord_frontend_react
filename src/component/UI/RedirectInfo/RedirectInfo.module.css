@@ -1,0 +1,14 @@
+.redirectInfo {
+  color: white;
+}
+
+.redirectInfo a {
+  color: #acfadf;
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: 1px solid white;
+}
+
+.redirectInfo a:hover {
+  color: black;
+}

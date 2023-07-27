@@ -1,0 +1,25 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 2px 0;
+}
+
+.inputWrapper label {
+  color: white;
+  text-transform: "uppercase";
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.inputWrapper input {
+  flex-grow: 1;
+  height: 40px;
+  border: 1px solid #3f2e3e;
+  color: white;
+  background-color: #3f2e3e;
+  margin: 0;
+  font-size: 16px;
+  padding: 0 5px;
+}
