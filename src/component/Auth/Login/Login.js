@@ -21,6 +21,8 @@ function Login() {
   const handleLogin = () => {
     if (isFormValid) {
       console.log(email, password);
+    } else {
+      alert("not a valid user details");
     }
   };
 
