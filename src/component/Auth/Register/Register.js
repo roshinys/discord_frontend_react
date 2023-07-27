@@ -3,8 +3,14 @@ import AuthBox from "../../UI/AuthBox/AuthBox";
 import RegisterInput from "./RegisterInput";
 import RegisterHeader from "./RegisterHeader";
 import RegisterFooter from "./RegisterFooter";
+import { registerUser } from "../../../store/slice/auth-actions";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { alertActions } from "../../../store/slice/alert-slice";
 
 function Register() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
@@ -23,9 +29,12 @@ function Register() {
 
   const handleRegister = () => {
     if (isFormValid) {
-      console.log(email, password);
+      const user = { username, email, password };
+      dispatch(registerUser(user, navigate));
     } else {
-      alert("not a valid user details");
+      dispatch(
+        alertActions.setAlert({ content: "Enter valid email and password" })
+      );
     }
   };
 
