@@ -5,6 +5,19 @@ const apiClient = axios.create({
   timeout: 1000,
 });
 
+apiClient.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      config.headers.Authorization = token;
+    }
+    return config;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
+
 export const login = async (data) => {
   try {
     return await apiClient.post("/auth/login", data);
