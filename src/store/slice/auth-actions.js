@@ -6,8 +6,10 @@ export const registerUser = (user, navigate) => {
   return async (dispatch) => {
     try {
       const response = await api.register(user);
+
+      console.log(response);
       if (response.error) {
-        throw new Error(response?.exception?.response?.data?.message);
+        throw new Error(response?.exception?.response?.data);
       } else {
         const { user, token } = response.data;
         const userDetails = {
@@ -32,7 +34,7 @@ export const loginUser = (user, navigate) => {
     try {
       const response = await api.login(user);
       if (response.error) {
-        throw new Error(response?.exception?.response?.data?.message);
+        throw new Error(response?.exception?.response?.data);
       } else {
         const { user, token } = response.data;
         const userDetails = {
