@@ -1,0 +1,17 @@
+.friendListButton {
+  width: 100% !important;
+  height: 38px !important;
+  margin-top: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  text-transform: none !important;
+  color: black !important;
+  position: relative !important;
+}
+
+.username {
+  margin-left: 7px !important;
+  font-weight: 700 I !important;
+  color: #8e9297 !important;
+}

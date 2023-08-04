@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import InputLabel from "../../UI/InputLabel/InputLabel";
+import Button from "../../UI/Button/Button";
 
 function AddFriendDialog({
   isDialopOpen,
@@ -50,6 +51,18 @@ function AddFriendDialog({
             placeholder="Enter email"
           />
         </DialogContent>
+        <DialogActions>
+          <Button
+            onClick={handleSendInvitation}
+            disabled={!isFormValid}
+            label="Send"
+            additionalStyles={{
+              marginLeft: "15px",
+              marginRight: "15px",
+              marginBottom: "10px",
+            }}
+          />
+        </DialogActions>
       </Dialog>
     </div>
   );

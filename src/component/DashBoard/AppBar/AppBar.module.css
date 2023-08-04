@@ -7,7 +7,7 @@
   background-color: #36393f;
   width: calc(100% - 295px);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start !important;
   align-items: center;
   padding: 0 15px;
 }

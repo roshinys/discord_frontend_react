@@ -7,6 +7,7 @@ function Button({ label, additionalStyles, disabled, onClick }) {
       className={styles.customButton}
       style={additionalStyles ? additionalStyles : {}}
       onClick={onClick}
+      disabled={disabled}
     >
       {label}
     </button>
